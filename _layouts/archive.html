@@ -29,42 +29,36 @@ layout: default
     text-align: justify;
   }
 
-  /* New container to vertically and horizontally center title + line */
-  .title-line-container {
+  .archive-header {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* horizontally center */
-    justify-content: center; /* vertically center */
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2rem;
   }
 
-  .page__title {
+  .archive-header h1 {
     font-size: 2.5rem;
     margin: 0;
-    padding: 0;
-    /* text-align center redundant here because container aligns center */
   }
 
-  /* line below title */
-  .title-line {
-    width: 120px;
-    height: 4px;
-    background-color: #FF7F50; /* coral color matching your .archive__item-title link */
+  .archive-header .line {
     margin-top: 0.5rem;
+    width: 100px;
+    height: 4px;
+    background-color: #FF7F50;
     border-radius: 2px;
   }
 </style>
 
 <div id="main" role="main">
-
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <div class="title-line-container">
-        <h1 class="page__title">{{ page.title }}</h1>
-        <div class="title-line"></div>
-      </div>
+      <header class="archive-header">
+        <h1>{{ page.title }}</h1>
+        <div class="line"></div>
+      </header>
     {% endunless %}
     {{ content }}
   </div>
-
 </div>
