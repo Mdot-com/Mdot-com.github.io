@@ -66,10 +66,14 @@ layout: compress
         text-align: center;
         transition: background-color 0.3s, color 0.3s;
       }
-      .masthead__button.active,
       .masthead__button:hover {
         background-color: var(--global-text-color);
         color: var(--global-bg-color);
+      }
+      .masthead__button.active {
+        text-decoration: underline;
+        background-color: var(--global-bg-color);
+        color: var(--global-text-color);
       }
       .masthead__list {
         flex-grow: 1;
@@ -92,9 +96,17 @@ layout: compress
       }
       .page-content {
         margin-left: 220px;
-        padding: 4rem 2rem 2rem 2rem;
+        padding: 4rem 2rem 4rem 2rem;
         box-sizing: border-box;
         min-height: 100vh;
+      }
+      .page__footer {
+        position: relative;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        background: var(--global-bg-color);
+        border-top: 1px solid #ccc;
+        box-sizing: border-box;
       }
     </style>
   </head>
