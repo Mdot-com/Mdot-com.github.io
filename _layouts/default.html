@@ -56,6 +56,7 @@ layout: compress
         z-index: 900;
       }
       .masthead__button {
+        display: block;
         padding: 0.6rem;
         border-radius: 6px;
         border: 2px solid var(--global-text-color);
@@ -64,6 +65,7 @@ layout: compress
         font-weight: 600;
         cursor: pointer;
         text-align: center;
+        text-decoration: none;
         transition: background-color 0.3s, color 0.3s;
       }
       .masthead__button:hover {
@@ -71,9 +73,8 @@ layout: compress
         color: var(--global-bg-color);
       }
       .masthead__button.active {
-        text-decoration: underline;
-        background-color: var(--global-bg-color);
-        color: var(--global-text-color);
+        font-weight: 700;
+        /* No background color change */
       }
       .masthead__list {
         flex-grow: 1;
@@ -96,17 +97,9 @@ layout: compress
       }
       .page-content {
         margin-left: 220px;
-        padding: 4rem 2rem 4rem 2rem;
+        padding: 4rem 2rem 2rem 2rem;
         box-sizing: border-box;
         min-height: 100vh;
-      }
-      .page__footer {
-        position: relative;
-        margin-top: 2rem;
-        padding: 1rem 2rem;
-        background: var(--global-bg-color);
-        border-top: 1px solid #ccc;
-        box-sizing: border-box;
       }
     </style>
   </head>
@@ -124,8 +117,8 @@ layout: compress
     </div>
 
     <div class="masthead-left">
-      <button id="btn-publications" class="masthead__button active">Publications</button>
-      <button id="btn-scripts" class="masthead__button">Scripts</button>
+      <a href="{{ base_path }}/publications" class="masthead__button{% if page.url contains 'publications' %} active{% endif %}" id="btn-publications">Publications</a>
+      <a href="{{ base_path }}/scripts" class="masthead__button{% if page.url contains 'scripts' %} active{% endif %}" id="btn-scripts">Scripts</a>
 
       <div id="publications-list" class="masthead__list">
         <ul>
@@ -168,24 +161,23 @@ layout: compress
     {% include scripts.html %}
 
     <script>
+      // The toggle of publications/scripts list is optional now, 
+      // but you can keep it if you want dynamic show/hide inside sidebar
+
       const btnPubs = document.getElementById('btn-publications');
       const btnScripts = document.getElementById('btn-scripts');
       const pubsList = document.getElementById('publications-list');
       const scriptsList = document.getElementById('scripts-list');
 
-      btnPubs.onclick = () => {
-        btnPubs.classList.add('active');
-        btnScripts.classList.remove('active');
+      btnPubs.addEventListener('mouseover', () => {
         pubsList.style.display = 'block';
         scriptsList.style.display = 'none';
-      };
+      });
 
-      btnScripts.onclick = () => {
-        btnScripts.classList.add('active');
-        btnPubs.classList.remove('active');
+      btnScripts.addEventListener('mouseover', () => {
         scriptsList.style.display = 'block';
         pubsList.style.display = 'none';
-      };
+      });
     </script>
   </body>
 </html>
