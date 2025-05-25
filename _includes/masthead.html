@@ -1,17 +1,22 @@
 {% include base_path %}
 
-<div class="masthead">
-  <div class="masthead__title">
+<div class="masthead-top">
+  <div class="masthead-top__title">
     <a href="{{ base_path }}/">Massive Star Group at Armagh Observatory</a>
   </div>
+  <div id="theme-toggle" class="masthead-top__toggle">
+    <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+  </div>
+</div>
 
-  <div class="masthead__buttons">
-    <button id="btn-publications" class="masthead__button active">Publications</button>
-    <button id="btn-scripts" class="masthead__button">Scripts</button>
+<div class="masthead-left">
+  <div class="masthead-left__buttons">
+    <button id="btn-publications" class="masthead-left__button active">Publications</button>
+    <button id="btn-scripts" class="masthead-left__button">Scripts</button>
   </div>
 
-  <div class="masthead__links">
-    <div id="publications-list" class="masthead__list">
+  <div class="masthead-left__links">
+    <div id="publications-list" class="masthead-left__list">
       <ul>
         {% for link in site.data.navigation.publications %}
           {% if link.url contains 'http' %}
@@ -24,7 +29,7 @@
       </ul>
     </div>
 
-    <div id="scripts-list" class="masthead__list" style="display:none;">
+    <div id="scripts-list" class="masthead-left__list" style="display:none;">
       <ul>
         {% for link in site.data.navigation.scripts %}
           {% if link.url contains 'http' %}
@@ -37,10 +42,6 @@
       </ul>
     </div>
   </div>
-</div>
-
-<div id="theme-toggle" class="theme-toggle-fixed">
-  <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
 </div>
 
 <script>
@@ -66,55 +67,66 @@
 
 <style>
   body, html {
-    margin: 0; 
+    margin: 0;
     padding: 0;
+    height: 100%;
   }
 
-  .masthead {
+  .masthead-top {
     display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    padding: 1rem;
-    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--global-bg-color);
     box-sizing: border-box;
-    /* Removed border-right */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
   }
 
-  .masthead__title {
+  .masthead-top__title a {
     font-weight: bold;
     font-size: 1.25rem;
+    color: var(--global-text-color);
+    text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 1rem;
   }
 
-  .masthead__title a {
-    text-decoration: none;
-    color: var(--global-text-color);
-  }
-
-  #theme-toggle {
+  #theme-toggle a {
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--global-text-color);
   }
 
-  .theme-toggle-fixed {
+  .masthead-left {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 1rem;
+    box-sizing: border-box;
     position: fixed;
-    top: 0.75rem;
-    right: 0.75rem;
-    z-index: 9999;
+    top: 56px; /* height of masthead-top */
+    bottom: 0;
+    left: 0;
+    background-color: var(--global-bg-color);
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
   }
 
-  .masthead__buttons {
+  .masthead-left__buttons {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1rem;
   }
 
-  .masthead__button {
+  .masthead-left__button {
     padding: 0.5rem;
     background: var(--global-bg-color);
     border: 2px solid var(--global-text-color);
@@ -125,37 +137,42 @@
     color: var(--global-text-color);
   }
 
-  .masthead__button.active {
+  .masthead-left__button.active {
     background-color: var(--global-text-color);
     color: var(--global-bg-color);
   }
 
-  .masthead__button:hover:not(.active) {
+  .masthead-left__button:hover:not(.active) {
     background-color: var(--global-text-color);
     color: var(--global-bg-color);
   }
 
-  .masthead__links {
+  .masthead-left__links {
     flex-grow: 1;
-    overflow-y: auto;
   }
 
-  .masthead__list ul {
+  .masthead-left__list ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .masthead__list li {
+  .masthead-left__list li {
     margin-bottom: 0.5rem;
   }
 
-  .masthead__list a {
+  .masthead-left__list a {
     text-decoration: none;
     color: var(--global-text-color);
   }
 
-  .masthead__list a:hover {
+  .masthead-left__list a:hover {
     text-decoration: underline;
+  }
+
+  /* Add padding to body content so it doesn't go under fixed header/sidebar */
+  main {
+    margin-left: 300px;
+    padding-top: 56px;
   }
 </style>
