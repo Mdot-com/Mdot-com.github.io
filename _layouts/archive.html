@@ -28,8 +28,30 @@ layout: default
     margin: 0 auto 30px auto;
     text-align: justify;
   }
+
+  /* New container to vertically and horizontally center title + line */
+  .title-line-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* horizontally center */
+    justify-content: center; /* vertically center */
+    margin-bottom: 2rem;
+  }
+
   .page__title {
-    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    /* text-align center redundant here because container aligns center */
+  }
+
+  /* line below title */
+  .title-line {
+    width: 120px;
+    height: 4px;
+    background-color: #FF7F50; /* coral color matching your .archive__item-title link */
+    margin-top: 0.5rem;
+    border-radius: 2px;
   }
 </style>
 
@@ -37,7 +59,10 @@ layout: default
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
+      <div class="title-line-container">
+        <h1 class="page__title">{{ page.title }}</h1>
+        <div class="title-line"></div>
+      </div>
     {% endunless %}
     {{ content }}
   </div>
