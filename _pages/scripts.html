@@ -1,43 +1,31 @@
 ---
 layout: archive
-title: ""
+title: "Scripts"
 permalink: /scripts/
 author_profile: true
 ---
 
 <style>
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
-
-  main.page__content {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  #content-wrapper {
+  #main {
     max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 15px;
   }
-
-  .title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 15px; /* reduced from 30 */
-    text-align: left;
-    padding-left: 5px;
-    line-height: 1.2;
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
-
-  .title hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    width: 100%;
-    margin: 8px 0 25px 0; /* adjust top margin to line up */
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  .page-header .line {
+    margin-top: 0.5rem;
+    width: 100px;
+    height: 4px;
+    background-color: #FF7F50;
+    border-radius: 2px;
   }
 
   .section-title {
@@ -80,12 +68,12 @@ author_profile: true
   }
 </style>
 
-<div id="content-wrapper">
-  <div class="title">
-    Scripts
-    <hr />
-  </div>
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+  <div class="line"></div>
+</div>
 
+<div id="content-wrapper">
   <div class="section-title">1. Mass Luminosity Calculator</div>
   <div class="section-text">
     This web interface enables users to compute minimum, maximum, and pure-helium mass-luminosity relations (MLR), based on the stellar structure models presented in Sabhahit et al. (2025b). This work builds upon existing MLRs in the literature by incorporating structure models featuring a helium (He) core and hydrogen (H) shell - configurations that can result from partial envelope stripping and appear to break simple homology relations.
