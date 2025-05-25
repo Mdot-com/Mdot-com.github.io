@@ -100,22 +100,6 @@ layout: compress
         box-sizing: border-box;
         min-height: 100vh;
       }
-      .page__footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: var(--global-bg-color);
-        border-top: 1px solid #ccc;
-        padding: 0.5rem 1rem;
-        box-sizing: border-box;
-        z-index: 1100;
-        font-size: 0.9rem;
-      }
-      .page__footer footer {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
     </style>
   </head>
 
@@ -164,13 +148,6 @@ layout: compress
 
     <div class="page-content">
       {{ content }}
-    </div>
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
     </div>
 
     {% include scripts.html %}
