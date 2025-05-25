@@ -1,28 +1,145 @@
 {% include base_path %}
 
 <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{{ base_path }}/">Massive Star Group at Armagh Observatory</a>
-          </li>
-          {% for link in site.data.navigation.main limit:3 %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item rectangle-item">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail rectangle-item">
-            <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
-        </ul>
-      </nav>
+  <div class="masthead__top-row">
+    <div class="masthead__title">
+      <a href="{{ base_path }}/">Massive Star Group at Armagh Observatory</a>
+    </div>
+    <div id="theme-toggle" class="masthead__toggle">
+      <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+    </div>
+  </div>
+
+  <div class="masthead__buttons">
+    <button id="btn-publications" class="masthead__button active">Publications</button>
+    <button id="btn-scripts" class="masthead__button">Scripts</button>
+  </div>
+
+  <div class="masthead__links">
+    <div id="publications-list" class="masthead__list">
+      <ul>
+        {% for link in site.data.navigation.publications %}
+          {% if link.url contains 'http' %}
+            {% assign domain = '' %}
+          {% else %}
+            {% assign domain = base_path %}
+          {% endif %}
+          <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="scripts-list" class="masthead__list" style="display:none;">
+      <ul>
+        {% for link in site.data.navigation.scripts %}
+          {% if link.url contains 'http' %}
+            {% assign domain = '' %}
+          {% else %}
+            {% assign domain = base_path %}
+          {% endif %}
+          <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
+
+<script>
+  const btnPubs = document.getElementById('btn-publications');
+  const btnScripts = document.getElementById('btn-scripts');
+  const pubsList = document.getElementById('publications-list');
+  const scriptsList = document.getElementById('scripts-list');
+
+  btnPubs.onclick = () => {
+    btnPubs.classList.add('active');
+    btnScripts.classList.remove('active');
+    pubsList.style.display = 'block';
+    scriptsList.style.display = 'none';
+  };
+
+  btnScripts.onclick = () => {
+    btnScripts.classList.add('active');
+    btnPubs.classList.remove('active');
+    scriptsList.style.display = 'block';
+    pubsList.style.display = 'none';
+  };
+</script>
+
+<style>
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .masthead__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .masthead__title a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--global-text-color);
+  }
+
+  #theme-toggle a {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--global-text-color);
+  }
+
+  .masthead__buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .masthead__button {
+    flex: 1;
+    padding: 0.5rem;
+    background: var(--global-bg-color);
+    border: 2px solid var(--global-text-color);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .masthead__button.active,
+  .masthead__button:hover {
+    background-color: var(--global-text-color);
+    color: var(--global-bg-color);
+  }
+
+  .masthead__links {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .masthead__list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .masthead__list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .masthead__list a {
+    text-decoration: none;
+    color: var(--global-text-color);
+  }
+
+  .masthead__list a:hover {
+    text-decoration: underline;
+  }
+</style>
