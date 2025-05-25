@@ -1,5 +1,6 @@
 {% include base_path %}
 
+<!-- Top horizontal masthead -->
 <div class="masthead-top">
   <div class="masthead-top__title">
     <a href="{{ base_path }}/">Massive Star Group at Armagh Observatory</a>
@@ -9,39 +10,41 @@
   </div>
 </div>
 
+<!-- Left vertical masthead below top bar -->
 <div class="masthead-left">
-  <div class="masthead-left__buttons">
-    <button id="btn-publications" class="masthead-left__button active">Publications</button>
-    <button id="btn-scripts" class="masthead-left__button">Scripts</button>
+  <button id="btn-publications" class="masthead__button active">Publications</button>
+  <button id="btn-scripts" class="masthead__button">Scripts</button>
+
+  <div id="publications-list" class="masthead__list">
+    <ul>
+      {% for link in site.data.navigation.publications %}
+        {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+        {% else %}
+          {% assign domain = base_path %}
+        {% endif %}
+        <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
 
-  <div class="masthead-left__links">
-    <div id="publications-list" class="masthead-left__list">
-      <ul>
-        {% for link in site.data.navigation.publications %}
-          {% if link.url contains 'http' %}
-            {% assign domain = '' %}
-          {% else %}
-            {% assign domain = base_path %}
-          {% endif %}
-          <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div id="scripts-list" class="masthead-left__list" style="display:none;">
-      <ul>
-        {% for link in site.data.navigation.scripts %}
-          {% if link.url contains 'http' %}
-            {% assign domain = '' %}
-          {% else %}
-            {% assign domain = base_path %}
-          {% endif %}
-          <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
+  <div id="scripts-list" class="masthead__list" style="display:none;">
+    <ul>
+      {% for link in site.data.navigation.scripts %}
+        {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+        {% else %}
+          {% assign domain = base_path %}
+        {% endif %}
+        <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
+</div>
+
+<!-- Main content container to the right -->
+<div class="page-content">
+  <!-- Your page content goes here -->
 </div>
 
 <script>
@@ -66,26 +69,29 @@
 </script>
 
 <style>
-  body, html {
+  /* Reset margins on body */
+  body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    font-family: Arial, sans-serif;
+    --global-text-color: #222;
+    --global-bg-color: #fff;
   }
 
+  /* Top masthead bar spanning full width */
   .masthead-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #ccc;
-    background-color: var(--global-bg-color);
-    box-sizing: border-box;
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10000;
+    height: 50px;
+    background: var(--global-bg-color);
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    z-index: 1000;
   }
 
   .masthead-top__title a {
@@ -94,85 +100,91 @@
     color: var(--global-text-color);
     text-decoration: none;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
-  #theme-toggle a {
-    cursor: pointer;
+  .masthead-top__toggle {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+  }
+
+  .masthead-top__toggle a {
     font-size: 1.5rem;
     color: var(--global-text-color);
+    cursor: pointer;
   }
 
+  /* Left vertical masthead below the top bar */
   .masthead-left {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+    position: fixed;
+    top: 50px; /* below top masthead */
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 50px);
+    background: var(--global-bg-color);
+    border-right: 1px solid #ccc;
     padding: 1rem;
     box-sizing: border-box;
-    position: fixed;
-    top: 56px; /* height of masthead-top */
-    bottom: 0;
-    left: 0;
-    background-color: var(--global-bg-color);
-    overflow-y: auto;
-    border-right: 1px solid #ccc;
-  }
-
-  .masthead-left__buttons {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
+    overflow-y: auto;
   }
 
-  .masthead-left__button {
+  .masthead__button {
     padding: 0.5rem;
-    background: var(--global-bg-color);
     border: 2px solid var(--global-text-color);
     border-radius: 8px;
+    background: var(--global-bg-color);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    color: var(--global-text-color);
+    width: 100%;
   }
 
-  .masthead-left__button.active {
+  .masthead__button.active,
+  .masthead__button:hover {
     background-color: var(--global-text-color);
     color: var(--global-bg-color);
   }
 
-  .masthead-left__button:hover:not(.active) {
-    background-color: var(--global-text-color);
-    color: var(--global-bg-color);
-  }
-
-  .masthead-left__links {
+  .masthead__list {
     flex-grow: 1;
+    overflow-y: auto;
   }
 
-  .masthead-left__list ul {
+  .masthead__list ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .masthead-left__list li {
+  .masthead__list li {
     margin-bottom: 0.5rem;
   }
 
-  .masthead-left__list a {
-    text-decoration: none;
+  .masthead__list a {
     color: var(--global-text-color);
+    text-decoration: none;
   }
 
-  .masthead-left__list a:hover {
+  .masthead__list a:hover {
     text-decoration: underline;
   }
 
-  /* Add padding to body content so it doesn't go under fixed header/sidebar */
-  main {
-    margin-left: 300px;
-    padding-top: 56px;
+  /* Main page content, positioned to the right of left masthead */
+  .page-content {
+    margin-left: 200px; /* same width as left masthead */
+    padding: 60px 2rem 2rem 2rem; /* top padding > top bar height + some margin */
+    box-sizing: border-box;
+  }
+
+  /* Scrollbar styling for left menu if needed */
+  .masthead-left::-webkit-scrollbar {
+    width: 8px;
+  }
+  .masthead-left::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
   }
 </style>
