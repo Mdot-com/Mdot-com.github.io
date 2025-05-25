@@ -74,7 +74,6 @@ layout: compress
       }
       .masthead__button.active {
         font-weight: 700;
-        /* No background color change */
       }
       .masthead__list {
         flex-grow: 1;
@@ -100,6 +99,21 @@ layout: compress
         padding: 4rem 2rem 2rem 2rem;
         box-sizing: border-box;
         min-height: 100vh;
+      }
+      .page__footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--global-bg-color);
+        border-top: 1px solid #ccc;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        z-index: 1100;
+      }
+      .page__footer footer {
+        max-width: 1200px;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -161,9 +175,6 @@ layout: compress
     {% include scripts.html %}
 
     <script>
-      // The toggle of publications/scripts list is optional now, 
-      // but you can keep it if you want dynamic show/hide inside sidebar
-
       const btnPubs = document.getElementById('btn-publications');
       const btnScripts = document.getElementById('btn-scripts');
       const pubsList = document.getElementById('publications-list');
