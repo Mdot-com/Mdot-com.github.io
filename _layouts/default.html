@@ -96,9 +96,24 @@ layout: compress
       }
       .page-content {
         margin-left: 220px;
-        padding: 4rem 2rem 2rem 2rem;
+        padding: 4rem 2rem 4rem 2rem;
         box-sizing: border-box;
         min-height: 100vh;
+        padding-bottom: 3rem;
+      }
+      .page__footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2rem;
+        background-color: var(--global-bg-color);
+        border-top: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        z-index: 950;
       }
     </style>
   </head>
@@ -113,6 +128,13 @@ layout: compress
       <div id="theme-toggle" class="masthead-top__toggle">
         <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
       </div>
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
     </div>
 
     <div class="masthead-left">
@@ -151,14 +173,6 @@ layout: compress
     </div>
 
     {% include scripts.html %}
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-
 
     <script>
       const btnPubs = document.getElementById('btn-publications');
