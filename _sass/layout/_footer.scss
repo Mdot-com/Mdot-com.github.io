@@ -9,15 +9,14 @@
 
   float: left;
   margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  margin-right: auto;
+  width: auto;
+  max-width: 400px;
   clear: both;
 
-  /* sticky footer fix start */
   position: absolute;
   bottom: 0em;
   height: auto;
-  /* sticky footer fix end */
 
   margin-top: 3em;
 
@@ -29,7 +28,7 @@
 
   footer {
     @include clearfix;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     margin-top: 1em;
     max-width: 100%;
