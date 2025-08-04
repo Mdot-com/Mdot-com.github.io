@@ -1,25 +1,27 @@
-.content-pagination-wrapper {
+.post-pagination-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2em;
-  max-width: 900px;
   margin: 3em auto;
+  max-width: 1200px;
   padding: 0 1em;
 }
 
-.post-pagination-button {
-  flex-shrink: 0;
-  padding: 0.75em 1.5em;
+.square-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffd699;
   color: #333;
-  border: 1px solid #e0a95c;
-  border-radius: 5px;
-  font-weight: 500;
+  border: 2px solid #e0a95c;
+  border-radius: 6px;
+  font-size: 1.5em;
+  font-weight: bold;
   text-decoration: none;
   transition: background-color 0.2s ease;
-  min-width: 100px;
-  text-align: center;
 
   &:hover {
     background-color: #ffc266;
@@ -33,32 +35,8 @@
   }
 }
 
-.post-pagination-button.prev {
-  margin-right: auto;
-}
-
-.post-pagination-content {
-  flex-grow: 1;
-  max-width: 600px;
-  text-align: center;
-}
-
-.post-pagination-button.next {
-  margin-left: auto;
-}
-
-@media screen and (max-width: 600px) {
-  .content-pagination-wrapper {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .post-pagination-button {
-    width: 100%;
-    min-width: unset;
-  }
-
-  .post-pagination-content {
-    max-width: 100%;
-  }
+.post-content-center {
+  flex: 1;
+  max-width: 800px;
+  text-align: justify;
 }
