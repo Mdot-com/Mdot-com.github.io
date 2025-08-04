@@ -22,10 +22,10 @@
 
   footer {
     @include clearfix;
-    max-width: 700px;
-    margin-left: 1em;
+    max-width: 1000px; // Matches your masthead width
+    margin-left: 0;
     margin-right: auto;
-    padding: 1em 0 2em;
+    padding: 1em 1em 2em 1em;
     text-align: left;
 
     @include breakpoint($x-large) {
@@ -52,7 +52,10 @@
 
 .page__footer-copyright {
   font-family: $global-font-family;
-  font-size: 0.75em; // smaller and cleaner
+  font-size: 0.65em; // smaller than before
+  opacity: 0.8;
+  line-height: 1.4;
+  margin-top: 0.5em;
 }
 
 .page__footer-follow {
