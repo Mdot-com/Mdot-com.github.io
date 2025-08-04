@@ -1,10 +1,9 @@
 ---
-
 layout: archive
 title: ""
-author\_profile: false
+author_profile: false
 sidebar: false
---------------
+---
 
 <style>
   .page__content,
@@ -50,7 +49,7 @@ sidebar: false
   <h3>Hydrodynamic Mass Estimates for R136a1</h3>
   <img src="/assets/images/R136a1_model.png" alt="R136a1 hydrodynamic model">
   <p>
-    Sabhahit, Vink &amp; Sander (2025) computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics :contentReference[oaicite:1]{index=1}.
+    <a href="/publications/#sabhahit2025">Sabhahit, Vink &amp; Sander (2025)</a> computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics.
   </p>
 </div>
 
@@ -58,7 +57,7 @@ sidebar: false
   <h3>Nitrogen Enrichment from Very Massive Stars</h3>
   <img src="/assets/images/nitrogen_galaxies.png" alt="Nitrogen in high‑z galaxies">
   <p>
-    Vink (2023) argued that early‑universe galaxies, including GN‑z11 and the Sunburst Arc, show high nitrogen content likely originating from VMS winds (100–1000 M⊙). These stars dominate chemical feedback and stellar ionization in young systems :contentReference[oaicite:2]{index=2}.
+    <a href="/publications/#vink2023">Vink (2023)</a> argued that early‑universe galaxies, including GN‑z11 and the Sunburst Arc, show high nitrogen content likely originating from VMS winds (100–1000 M⊙). These stars dominate chemical feedback and stellar ionization in young systems.
   </p>
 </div>
 
@@ -66,7 +65,7 @@ sidebar: false
   <h3>Universal Wind Behavior across the HR Diagram</h3>
   <img src="/assets/images/red_supergiant_kink.png" alt="RSG wind kink">
   <p>
-    Vink and Sabhahit (2023) identified a universal “wind kink” at the transition from optically thin to thick winds. Applied to red supergiants, this new RSG mass-loss prescription naturally reproduces the Humphreys‑Davidson limit and resolves long-standing supernova evolution issues :contentReference[oaicite:3]{index=3}.
+    <a href="/publications/#vink2023rsg">Vink and Sabhahit (2023)</a> identified a universal “wind kink” at the transition from optically thin to thick winds. Applied to red supergiants, this new RSG mass-loss prescription naturally reproduces the Humphreys‑Davidson limit and resolves long-standing supernova evolution issues.
   </p>
 </div>
 
@@ -74,7 +73,7 @@ sidebar: false
   <h3>Metallicity‑dependent Wind Scaling for OB Stars</h3>
   <img src="/assets/images/metallicity_scaling.png" alt="Metallicity scaling of winds">
   <p>
-    Vink &amp; Sander (2021) updated the Monte Carlo mass-loss recipe for massive OB stars, revealing a weaker terminal velocity dependence on metallicity and a strong relation between mass-loss rates and metallicity: \(\dot{M} \propto Z^{0.42–0.85}\) depending on temperature regime. This has direct implications for low-metallicity LIGO/Virgo black hole progenitors :contentReference[oaicite:4]{index=4}.
+    <a href="/publications/#vink2021">Vink &amp; Sander (2021)</a> updated the Monte Carlo mass-loss recipe for massive OB stars, revealing a weaker terminal velocity dependence on metallicity and a strong relation between mass-loss rates and metallicity: \(\dot{M} \propto Z^{0.42–0.85}\) depending on temperature regime. This has direct implications for low-metallicity LIGO/Virgo black hole progenitors.
   </p>
 </div>
 
