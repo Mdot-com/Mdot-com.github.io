@@ -9,8 +9,8 @@
 
   float: left;
   margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  margin-right: auto;
+  max-width: 400px;
   clear: both;
 
   /* sticky footer fix start */
@@ -22,14 +22,14 @@
   margin-top: 3em;
 
   -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
+  animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
+  animation-delay: 0.45s;
   border-top: 1px solid var(--global-dark-border-color);
 
   footer {
     @include clearfix;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     margin-top: 1em;
     max-width: 100%;
