@@ -465,7 +465,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 .page__footer-follow,
 .page__footer-copyright {
   max-width: 900px;   // reduced width to limit right-side spread
-  margin-left: 2em;   // add left margin
+  margin-left: 1em;   // add left margin
   margin-right: auto; // push content away from the right edge
   padding-left: 1em;  // consistent padding
   text-align: left;   // keep text left-aligned
