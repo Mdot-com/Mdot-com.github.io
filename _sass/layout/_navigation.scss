@@ -2,41 +2,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 4em auto 2em auto;
-  padding: 0 1em;
+  margin: 2em 0;
 }
 
 .square-button {
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  color: $link-color;
-  font-size: 1.5em;
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
   font-weight: bold;
-  border: 2px solid $link-color;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  border: 2px solid #FF7F50;
+  color: #FF7F50;
+  font-size: 1.1em;
   transition: all 0.2s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-  &:hover {
-    background-color: $link-color;
-    color: white;
-  }
+.square-button:hover:not(.disabled) {
+  background-color: #FF7F50;
+  color: white;
+}
 
-  &.disabled {
-    background-color: transparent;
-    border-color: #ccc;
-    color: #ccc;
-    pointer-events: none;
-  }
+.square-button.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }
 
 .spacer {
-  flex: 1;
+  flex-grow: 1;
 }
-
-
