@@ -75,15 +75,29 @@ hide_title: true
 </div>
 
 <div id="content-wrapper">
-  <div class="section-title">1. Mass Luminosity Calculator</div>
+  <div class="section-title">1. Mass–Luminosity Calculator</div>
+
   <div class="section-text">
-    This web interface enables users to compute minimum, maximum, and pure-helium mass-luminosity relations (MLR), based on the stellar structure models presented in Sabhahit et al. (2025b). This work builds upon existing MLRs in the literature by incorporating structure models featuring a helium (He) core and hydrogen (H) shell - configurations that can result from partial envelope stripping and appear to break simple homology relations.
+    We provide a Python script and an online calculator that enable users to compute mass–luminosity relations (MLRs), which can predict the minimum, maximum, and pure-helium (He) mass for a given luminosity and surface composition — and vice versa.
+    These results are based on the stellar structure models presented in Sabhahit et al. (2025b) and build upon existing MLRs in the literature by incorporating models that feature a helium core and hydrogen shell. These configurations may result from partial envelope stripping and can break simple homology relations, appearing more luminous than pure-He stars despite having a lower mean molecular weight.
+    A detailed description of our additional structure models by taking into account partial envelope stripping and the resulting new MLRs can be found <a href="https://gautham-sabhahit.github.io/ml-calculator/" target="_blank">here</a>.
   </div>
 
   <div class="link-group">
     <a href="https://github.com/Apophis-1/Python-scripts/blob/main/ML-calculator.py" target="_blank">Python script</a>
     <a href="https://gautham-sabhahit.github.io/ml-calculator/" target="_blank">Online calculator</a>
   </div>
+
+  <div class="section-text">
+    For comparison, we also provide a Python script implementing the minimum and maximum MLRs from Gräfener et al. (2011). The original publication is available 
+    <a href="https://ui.adsabs.harvard.edu/abs/2011A%26A...535A..56G/abstract" target="_blank">here</a>.
+  </div>
+
+  <div class="link-group">
+    <a href="https://github.com/Apophis-1/Python-scripts/blob/main/ML-calculator-Grafener-2011.py" target="_blank">Python script</a>
+  </div>
+</div>
+
 
   <div class="section-title">2. To be announced</div>
   <div class="section-text">Content coming soon.</div>
