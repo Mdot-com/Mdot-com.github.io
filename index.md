@@ -47,7 +47,7 @@ sidebar: false
 
 <div>
   <h3>Hydrodynamic Mass Estimates for R136a1</h3>
-    <a href="/publications/2025-04-01-a-new-mass.md">Sabhahit et al. (2025a)</a> computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136a1 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics.
+    <a href="/_publications/2025-04-01-a-new-mass.md">Sabhahit et al. (2025a)</a> computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136a1 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics.
   </p>
 </div>
 
