@@ -93,8 +93,6 @@ sidebar: false
 <h2>News & Updates</h2>
 <ul>
   <li><strong>July 2025:</strong> Sabhahit et al. 2025 accepted in *A&A* on R136a1 hydrodynamic modeling.</li>
-  <li><strong>May 2025:</strong> Work on nitrogen yields from VMS presented at Massive Stars 2025.</li>
-  <li><strong>April 2025:</strong> New RSG wind kink prescription implemented in MESA and shared with community.</li>
 </ul>
 
 <h2>Contact</h2>
