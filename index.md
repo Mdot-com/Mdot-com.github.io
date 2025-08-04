@@ -52,8 +52,7 @@ sidebar: false
 </div>
 
 <div>
-  <h3>Nitrogen Enrichment from Very Massive Stars</h3>
-  <img src="/assets/images/nitrogen_galaxies.png" alt="Nitrogen in high‑z galaxies">
+  <h3>Nitrogen in high‑z galaxies</h3>
   <p>
     <a href="/publications/#vink2023">Vink (2023)</a> argued that early‑universe galaxies, including GN‑z11 and the Sunburst Arc, show high nitrogen content likely originating from VMS winds (100–1000 M⊙). These stars dominate chemical feedback and stellar ionization in young systems.
   </p>
