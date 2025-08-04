@@ -9,9 +9,7 @@
     <span class="square-button prev disabled">←</span>
   {% endif %}
 
-  <div class="post-content-center">
-    {{ content }}
-  </div>
+  <div class="spacer"></div>
 
   {% if page.next %}
     <a href="{{ base_path }}{{ page.next.url }}" class="square-button next" title="{{ page.next.title | markdownify | strip_html }}">
