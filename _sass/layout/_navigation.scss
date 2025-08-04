@@ -39,34 +39,33 @@
     }
   }
 }
-
-/* Single post pagination block (e.g., post_pagination.html) */
 .pagination-single {
   display: flex;
   justify-content: space-between;
-  gap: 1em;
+  align-items: center;
   margin: 2em 0;
-  flex-wrap: wrap;
 
   .pagination--pager {
-    display: inline-block;
-    width: 48%;
-    text-align: center;
+    flex: 0 0 48%;
     padding: 0.75em 1em;
-    border: 1px solid #ccc;
-    border-radius: 0.25em;
+    background-color: #ffd699;
+    border: 1px solid #e0a95c;
+    border-radius: 0.3em;
+    text-align: center;
     text-decoration: none;
     color: #333;
+    font-weight: 500;
 
     &:hover {
-      background: #f7f7f7;
+      background-color: #ffc266;
     }
 
     &.disabled {
       pointer-events: none;
-      background: #eee;
+      background: #f3f3f3;
       color: #999;
       opacity: 0.6;
+      border-color: #ddd;
     }
   }
 }
@@ -74,9 +73,11 @@
 @media screen and (max-width: 600px) {
   .pagination-single {
     flex-direction: column;
+    gap: 1em;
 
     .pagination--pager {
       width: 100%;
     }
   }
 }
+
