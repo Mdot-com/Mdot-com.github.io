@@ -1,70 +1,61 @@
 {% include base_path %}
 
 {% if paginator.total_pages > 1 %}
-<nav class="pagination">
-  <ul>
-    {% comment %} Link for previous page {% endcomment %}
+<nav class="pagination-bar">
+  <div class="pagination-controls">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <li><a href="{{ base_path }}/">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
+        <a class="pagination-button prev" href="{{ base_path }}/">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
       {% else %}
-        <li><a href="{{ base_path }}/page{{ paginator.previous_page }}/">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
+        <a class="pagination-button prev" href="{{ base_path }}/page{{ paginator.previous_page }}/">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
       {% endif %}
     {% else %}
-      <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span></a></li>
+      <span class="pagination-button prev disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
     {% endif %}
 
-    {% comment %} First page {% endcomment %}
-    {% if paginator.page == 1 %}
-      <li><a href="#" class="disabled current">1</a></li>
-    {% else %}
-      <li><a href="{{ base_path }}/">1</a></li>
-    {% endif %}
-
-    {% assign page_start = 2 %}
-    {% if paginator.page > 4 %}
-      {% assign page_start = paginator.page | minus: 2 %}
-      {% comment %} Ellipsis for truncated links {% endcomment %}
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    {% endif %}
-
-    {% assign page_end = paginator.total_pages | minus: 1 %}
-    {% assign pages_to_end = paginator.total_pages | minus: paginator.page %}
-    {% if pages_to_end > 4 %}
-      {% assign page_end = paginator.page | plus: 2 %}
-    {% endif %}
-
-    {% for index in (page_start..page_end) %}
-      {% if index == paginator.page %}
-        <li><a href="{{ base_path }}/page{{ index }}/" class="disabled current">{{ index }}</a></li>
+    <ul class="pagination-pages">
+      {% if paginator.page == 1 %}
+        <li><span class="current">1</span></li>
       {% else %}
-        {% comment %} Distance from current page and this link {% endcomment %}
-        {% assign dist = paginator.page | minus: index %}
-        {% if dist < 0 %}
-          {% comment %} Distance must be a positive value {% endcomment %}
-          {% assign dist = 0 | minus: dist %}
+        <li><a href="{{ base_path }}/">1</a></li>
+      {% endif %}
+
+      {% assign page_start = 2 %}
+      {% if paginator.page > 4 %}
+        {% assign page_start = paginator.page | minus: 2 %}
+        <li><span class="ellipsis">…</span></li>
+      {% endif %}
+
+      {% assign page_end = paginator.total_pages | minus: 1 %}
+      {% assign pages_to_end = paginator.total_pages | minus: paginator.page %}
+      {% if pages_to_end > 4 %}
+        {% assign page_end = paginator.page | plus: 2 %}
+      {% endif %}
+
+      {% for index in (page_start..page_end) %}
+        {% if index == paginator.page %}
+          <li><span class="current">{{ index }}</span></li>
+        {% else %}
+          <li><a href="{{ base_path }}/page{{ index }}/">{{ index }}</a></li>
         {% endif %}
-        <li><a href="{{ base_path }}/page{{ index }}/">{{ index }}</a></li>
+      {% endfor %}
+
+      {% if pages_to_end > 3 %}
+        <li><span class="ellipsis">…</span></li>
       {% endif %}
-    {% endfor %}
 
-    {% comment %} Ellipsis for truncated links {% endcomment %}
-    {% if pages_to_end > 3 %}
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    {% endif %}
+      {% if paginator.page == paginator.total_pages %}
+        <li><span class="current">{{ paginator.page }}</span></li>
+      {% else %}
+        <li><a href="{{ base_path }}/page{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a></li>
+      {% endif %}
+    </ul>
 
-    {% if paginator.page == paginator.total_pages %}
-      <li><a href="#" class="disabled current">{{ paginator.page }}</a></li>
-    {% else %}
-      <li><a href="{{ base_path }}/page{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a></li>
-    {% endif %}
-
-    {% comment %} Link next page {% endcomment %}
     {% if paginator.next_page %}
-      <li><a href="{{ base_path }}/page{{ paginator.next_page }}/">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a></li>
+      <a class="pagination-button next" href="{{ base_path }}/page{{ paginator.next_page }}/">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
     {% else %}
-      <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span></a></li>
+      <span class="pagination-button next disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span>
     {% endif %}
-  </ul>
+  </div>
 </nav>
 {% endif %}
