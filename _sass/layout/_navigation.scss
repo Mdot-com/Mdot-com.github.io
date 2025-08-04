@@ -1,31 +1,27 @@
 .pagination-bar {
   margin: 3em 0;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0 1em;  /* Optional: add side padding for breathing room */
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pagination-controls {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1000px;
-
-  /* Remove gap so buttons hug edges */
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 .pagination-button {
-  min-width: 100px;
   padding: 0.75em 1.5em;
   background-color: #ffd699;
   color: #333;
   border: 1px solid #e0a95c;
   border-radius: 5px;
   font-weight: 500;
-  text-align: center;
   text-decoration: none;
   transition: background-color 0.2s ease;
 
@@ -46,13 +42,12 @@
   align-items: center;
   list-style: none;
   gap: 0.5em;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-grow: 1;  /* takes all space between buttons */
-  margin: 0 1em; /* add some horizontal margin so pages don't touch buttons */
+  flex-grow: 1;
 
   li {
-    a,
-    span {
+    a, span {
       padding: 0.5em 0.9em;
       text-decoration: none;
       border-radius: 4px;
@@ -61,7 +56,6 @@
     a {
       background: #eee;
       color: #333;
-
       &:hover {
         background: #ddd;
       }
@@ -89,10 +83,5 @@
   .pagination-button {
     width: 100%;
     text-align: center;
-    min-width: auto;
-  }
-
-  .pagination-pages {
-    margin: 1em 0;
   }
 }
