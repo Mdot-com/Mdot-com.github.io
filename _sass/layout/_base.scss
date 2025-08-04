@@ -63,7 +63,7 @@ small, .small {
 
 p {
   margin-bottom: 1.3em;
-   font-size: $type-size-6;
+  font-size: $type-size-6;
 }
 
 u,
@@ -158,7 +158,7 @@ td > code {
 }
 
 a > code {
-    color: inherit;
+  color: inherit;
 }
 
 pre > code {
@@ -323,23 +323,23 @@ nav {
    ANIMATIONS
    ========================================================================== */
 
-   @-webkit-keyframes intro {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
   }
-  
-  @keyframes intro {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Global animation transition */
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
@@ -355,22 +355,21 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
    Hide the following elements on print
    ========================================================================== */
 
-   @media print {
-    .masthead,
-    .toc,
-    .page__share,
-    .page__related,
-    .ads,
-    .page__footer {
-      display: none;
-    }
+@media print {
+  .masthead,
+  .toc,
+  .page__share,
+  .page__related,
+  .ads,
+  .page__footer {
+    display: none;
   }
+}
+
 .page__content {
   text-align: justify;
   max-width: 2000px;
 }
-
-
 
 .masthead__menu button {
   display: none;
@@ -436,11 +435,9 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 
 .archive__item-title > a {
   color: #FF7F50;
-
 }
 
-
-
+/* Pagination side button style */
 .pagination-side-button {
   border: 2px solid #FF7F50;
   background-color: transparent;
@@ -457,8 +454,6 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
     background-color: #FF7F50;
     color: white;
   }
-}
-
 
   &.disabled {
     opacity: 0.3;
@@ -467,6 +462,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   }
 }
 
+/* Footer alignment */
 .page__footer-follow,
 .page__footer-copyright {
   max-width: 1000px; /* or your preferred max width */
@@ -475,7 +471,3 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   padding-left: 1em;  /* optional padding */
   text-align: left;   /* align text left */
 }
-
-
-
-
