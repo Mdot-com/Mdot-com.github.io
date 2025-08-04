@@ -1,9 +1,10 @@
 ---
+
 layout: archive
 title: ""
-author_profile: false
+author\_profile: false
 sidebar: false
----
+--------------
 
 <style>
   .page__content,
@@ -29,9 +30,13 @@ sidebar: false
   We are the <strong>Massive Star Group</strong> at Armagh Observatory, focusing on the extremes of stellar physics—from metal‑free Population III stars to modern supermassive stars. Using self‑consistent hydrodynamic atmosphere models, we tackle stellar winds, mass loss, and the cosmic feedback of the most massive stars.
 </p>
 
+<h2>Group Lead</h2>
+<p>
+  <strong>Professor Jorick S. Vink</strong> is a leading theoretical astrophysicist at Armagh Observatory whose models of radiation‑driven winds in very massive stars have reshaped our understanding of stellar feedback, black hole seed formation, and chemical enrichment.
+</p>
+
 <h2>Team Members</h2>
 <ul>
-  <li><strong>Professor Jorick S. Vink</strong> – Group Lead / PI</li>
   <li>Ciaran Furey – PhD Student</li>
   <li>Ethan Winch – PhD Student</li>
   <li>Gautham Sabhahit – Postdoctoral Assistant</li>
@@ -39,15 +44,10 @@ sidebar: false
   <li>Andreas Sander – Former Postdoctoral Researcher</li>
 </ul>
 
-<h3>About Professor Jorick S. Vink</h3>
-<p>
-  Professor Jorick S. Vink is a leading theoretical astrophysicist at Armagh Observatory whose models of radiation‑driven winds in very massive stars have reshaped our understanding of stellar feedback, black hole seed formation, and chemical enrichment.
-</p>
-
 <h2>Research Highlights</h2>
 
 <div>
-  <h3>💧 Hydrodynamic Mass Estimates for R136a1</h3>
+  <h3>Hydrodynamic Mass Estimates for R136a1</h3>
   <img src="/assets/images/R136a1_model.png" alt="R136a1 hydrodynamic model">
   <p>
     Sabhahit, Vink &amp; Sander (2025) computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics :contentReference[oaicite:1]{index=1}.
@@ -55,7 +55,7 @@ sidebar: false
 </div>
 
 <div>
-  <h3>✨ Nitrogen Enrichment from Very Massive Stars</h3>
+  <h3>Nitrogen Enrichment from Very Massive Stars</h3>
   <img src="/assets/images/nitrogen_galaxies.png" alt="Nitrogen in high‑z galaxies">
   <p>
     Vink (2023) argued that early‑universe galaxies, including GN‑z11 and the Sunburst Arc, show high nitrogen content likely originating from VMS winds (100–1000 M⊙). These stars dominate chemical feedback and stellar ionization in young systems :contentReference[oaicite:2]{index=2}.
@@ -63,7 +63,7 @@ sidebar: false
 </div>
 
 <div>
-  <h3>🌿 Universal Wind Behavior across the HR Diagram</h3>
+  <h3>Universal Wind Behavior across the HR Diagram</h3>
   <img src="/assets/images/red_supergiant_kink.png" alt="RSG wind kink">
   <p>
     Vink and Sabhahit (2023) identified a universal “wind kink” at the transition from optically thin to thick winds. Applied to red supergiants, this new RSG mass-loss prescription naturally reproduces the Humphreys‑Davidson limit and resolves long-standing supernova evolution issues :contentReference[oaicite:3]{index=3}.
@@ -71,7 +71,7 @@ sidebar: false
 </div>
 
 <div>
-  <h3>🔥 Metallicity‑dependent Wind Scaling for OB Stars</h3>
+  <h3>Metallicity‑dependent Wind Scaling for OB Stars</h3>
   <img src="/assets/images/metallicity_scaling.png" alt="Metallicity scaling of winds">
   <p>
     Vink &amp; Sander (2021) updated the Monte Carlo mass-loss recipe for massive OB stars, revealing a weaker terminal velocity dependence on metallicity and a strong relation between mass-loss rates and metallicity: \(\dot{M} \propto Z^{0.42–0.85}\) depending on temperature regime. This has direct implications for low-metallicity LIGO/Virgo black hole progenitors :contentReference[oaicite:4]{index=4}.
