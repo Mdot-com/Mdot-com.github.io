@@ -1,8 +1,8 @@
 .pagination-bar {
   margin: 3em 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .pagination-controls {
@@ -11,11 +11,11 @@
   align-items: center;
   width: 100%;
   max-width: 1000px;
-  flex-wrap: wrap;
   gap: 1em;
 }
 
 .pagination-button {
+  flex-shrink: 0;
   padding: 0.75em 1.5em;
   background-color: #ffd699;
   color: #333;
@@ -24,6 +24,8 @@
   font-weight: 500;
   text-decoration: none;
   transition: background-color 0.2s ease;
+  min-width: 100px;
+  text-align: center;
 
   &:hover {
     background-color: #ffc266;
@@ -42,12 +44,12 @@
   align-items: center;
   list-style: none;
   gap: 0.5em;
-  flex-wrap: wrap;
   justify-content: center;
   flex-grow: 1;
 
   li {
-    a, span {
+    a,
+    span {
       padding: 0.5em 0.9em;
       text-decoration: none;
       border-radius: 4px;
@@ -56,6 +58,7 @@
     a {
       background: #eee;
       color: #333;
+
       &:hover {
         background: #ddd;
       }
@@ -83,5 +86,6 @@
   .pagination-button {
     width: 100%;
     text-align: center;
+    min-width: auto;
   }
 }
