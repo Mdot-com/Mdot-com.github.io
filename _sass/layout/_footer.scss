@@ -4,89 +4,90 @@
 
 .page__footer {
   @include clearfix;
-  background-color: var(--global-footer-bg-color);
-  color: var(--global-text-color-light);
-
-  width: 100%;
   clear: both;
   margin-top: 3em;
-
   position: relative;
   bottom: 0;
 
-  border-top: 1px solid var(--global-dark-border-color);
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
+  display: flex;
+  justify-content: flex-start; // align left
 
   footer {
     @include clearfix;
-    max-width: 1000px; // Matches your masthead width
+    background-color: var(--global-footer-bg-color);
+    color: var(--global-text-color-light);
+    border-top: 1px solid var(--global-dark-border-color);
+    -webkit-animation: intro 0.3s both;
+            animation: intro 0.3s both;
+    -webkit-animation-delay: 0.45s;
+            animation-delay: 0.45s;
+
+    max-width: 1000px;
+    width: 100%;
+    padding: 1em 1em 2em 1em;
     margin-left: 0;
     margin-right: auto;
-    padding: 1em 1em 2em 1em;
     text-align: left;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
     }
-  }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+    .fas,
+    .fab,
+    .far,
+    .fal {
+      color: var(--global-text-color-light);
     }
-  }
 
-  .fas,
-  .fab,
-  .far,
-  .fal {
-    color: var(--global-text-color-light);
-  }
-}
-
-.page__footer-copyright {
-  font-family: $global-font-family;
-  font-size: 0.65em; // smaller than before
-  opacity: 0.8;
-  line-height: 1.4;
-  margin-top: 0.5em;
-}
-
-.page__footer-follow {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  li {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: $sans-serif-narrow;
-    font-size: 0.75em;
-    text-transform: uppercase;
-  }
-
-  li + li:before {
-    content: "";
-    padding-right: 5px;
-  }
-
-  a {
-    padding-right: 10px;
-    font-weight: bold;
-  }
-
-  .social-icons {
     a {
-      white-space: nowrap;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .page__footer-copyright {
+      font-family: $global-font-family;
+      font-size: 0.65em;
+      opacity: 0.8;
+      line-height: 1.4;
+      margin-top: 0.5em;
+    }
+
+    .page__footer-follow {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      li {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: $sans-serif-narrow;
+        font-size: 0.75em;
+        text-transform: uppercase;
+      }
+
+      li + li:before {
+        content: "";
+        padding-right: 5px;
+      }
+
+      a {
+        padding-right: 10px;
+        font-weight: bold;
+      }
+
+      .social-icons {
+        a {
+          white-space: nowrap;
+        }
+      }
     }
   }
 }
