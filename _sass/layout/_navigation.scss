@@ -1,72 +1,42 @@
-.pagination {
-  clear: both;
-  padding: 1em 0;
-  margin: 1em 0;
-  text-align: center;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      margin: 0 0.25em;
-
-      a {
-        display: inline-block;
-        padding: 0.5em 0.75em;
-        border: 1px solid #ccc;
-        border-radius: 0.25em;
-        text-decoration: none;
-        color: #333;
-
-        &:hover {
-          background: #f0f0f0;
-        }
-
-        &.current {
-          background: #333;
-          color: #fff;
-          cursor: default;
-        }
-
-        &.disabled {
-          pointer-events: none;
-          opacity: 0.5;
-        }
-      }
-    }
-  }
+.pagination-wrapper {
+  width: 100%;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
 }
+
 .pagination-single {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2em 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
 
-  .pagination--pager {
-    flex: 0 0 48%;
-    padding: 0.75em 1em;
-    background-color: #ffd699;
-    border: 1px solid #e0a95c;
-    border-radius: 0.3em;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+.pagination--pager {
+  flex: 0 0 auto;
+  padding: 0.75em 1.5em;
+  background-color: #ffd699;
+  border: 1px solid #e0a95c;
+  border-radius: 0.3em;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 
-    &:hover {
-      background-color: #ffc266;
-    }
+  &:hover {
+    background-color: #ffc266;
+  }
 
-    &.disabled {
-      pointer-events: none;
-      background: #f3f3f3;
-      color: #999;
-      opacity: 0.6;
-      border-color: #ddd;
-    }
+  &.disabled {
+    pointer-events: none;
+    background-color: #f3f3f3;
+    color: #999;
+    opacity: 0.6;
+    border-color: #ddd;
   }
 }
 
@@ -80,4 +50,3 @@
     }
   }
 }
-
