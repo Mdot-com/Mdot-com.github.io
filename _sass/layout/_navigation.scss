@@ -3,29 +3,31 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 0 1em;  /* Optional: add side padding for breathing room */
+  box-sizing: border-box;
 }
 
 .pagination-controls {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1000px;
-  gap: 10em;
+
+  /* Remove gap so buttons hug edges */
+  justify-content: space-between;
 }
 
 .pagination-button {
-  flex-shrink: 0;
+  min-width: 100px;
   padding: 0.75em 1.5em;
   background-color: #ffd699;
   color: #333;
   border: 1px solid #e0a95c;
   border-radius: 5px;
   font-weight: 500;
+  text-align: center;
   text-decoration: none;
   transition: background-color 0.2s ease;
-  min-width: 100px;
-  text-align: center;
 
   &:hover {
     background-color: #ffc266;
@@ -45,7 +47,8 @@
   list-style: none;
   gap: 0.5em;
   justify-content: center;
-  flex-grow: 1;
+  flex-grow: 1;  /* takes all space between buttons */
+  margin: 0 1em; /* add some horizontal margin so pages don't touch buttons */
 
   li {
     a,
@@ -87,5 +90,9 @@
     width: 100%;
     text-align: center;
     min-width: auto;
+  }
+
+  .pagination-pages {
+    margin: 1em 0;
   }
 }
