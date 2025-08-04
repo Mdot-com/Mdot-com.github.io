@@ -1,21 +1,21 @@
-{% include base_path %}
-
-<div class="post-pagination-row">
+<div class="pagination-bar">
   {% if page.next %}
-    <a href="{{ base_path }}{{ page.next.url }}" class="square-button prev" title="{{ page.next.title | markdownify | strip_html }}">
-      ←
+    <a href="{{ base_path }}{{ page.next.url }}" class="pagination-side-button prev" title="{{ page.next.title | markdownify | strip_html }}">
+      ← {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
     </a>
   {% else %}
-    <span class="square-button prev disabled">←</span>
+    <span class="pagination-side-button prev disabled">
+      ← {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+    </span>
   {% endif %}
 
-  <div class="spacer"></div>
-
   {% if page.previous %}
-    <a href="{{ base_path }}{{ page.previous.url }}" class="square-button next" title="{{ page.previous.title | markdownify | strip_html }}">
-      →
+    <a href="{{ base_path }}{{ page.previous.url }}" class="pagination-side-button next" title="{{ page.previous.title | markdownify | strip_html }}">
+      {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }} →
     </a>
   {% else %}
-    <span class="square-button next disabled">→</span>
+    <span class="pagination-side-button next disabled">
+      {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }} →
+    </span>
   {% endif %}
 </div>
