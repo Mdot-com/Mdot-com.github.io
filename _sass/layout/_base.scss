@@ -445,6 +445,14 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   }
 }
 
+.page__footer-follow,
+.page__footer-copyright {
+  max-width: 1000px; /* or your preferred max width */
+  margin-left: 0;    /* align to the left */
+  margin-right: auto; /* push the right side empty */
+  padding-left: 1em;  /* optional padding */
+  text-align: left;   /* align text left */
+}
 
 
 
