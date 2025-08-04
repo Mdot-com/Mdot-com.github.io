@@ -34,7 +34,7 @@ sidebar: false
   <strong>Professor Jorick S. Vink</strong> is a leading theoretical astrophysicist at Armagh Observatory whose models of radiation‑driven winds in very massive stars have reshaped our understanding of stellar feedback, black hole seed formation, and chemical enrichment.
 </p>
 
-<h2>Team Members</h2>
+<h2>Current and Past Team Members</h2>
 <ul>
   <li>Ciaran Furey – PhD Student</li>
   <li>Ethan Winch – PhD Student</li>
@@ -47,9 +47,7 @@ sidebar: false
 
 <div>
   <h3>Hydrodynamic Mass Estimates for R136a1</h3>
-  <img src="/assets/images/R136a1_model.png" alt="R136a1 hydrodynamic model">
-  <p>
-    <a href="/publications/#sabhahit2025">Sabhahit, Vink &amp; Sander (2025)</a> computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics.
+    <a href="/publications/2025-04-01-a-new-mass.md">Sabhahit et al. (2025a)</a> computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136a1 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics.
   </p>
 </div>
 
