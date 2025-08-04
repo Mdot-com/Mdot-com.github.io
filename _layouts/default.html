@@ -104,17 +104,20 @@ layout: compress
       .page__footer {
         position: fixed;
         bottom: 0;
-        left: 0;
-        right: 0;
-        height: 6rem;
+        left: 280px;
+        width: calc(100% - 280px);
+        max-width: 1000px;
+        height: 4rem;
         background-color: var(--global-bg-color);
         border-top: 1px solid #ccc;
         display: flex;
         align-items: center;
-        text-align: center;
-        justify-content: center;
-        font-size: 0.85rem;
+        text-align: left;
+        padding-left: 1rem;
+        font-size: 0.75rem;
         z-index: 950;
+        box-sizing: border-box;
+        justify-content: flex-start;
       }
     </style>
   </head>
