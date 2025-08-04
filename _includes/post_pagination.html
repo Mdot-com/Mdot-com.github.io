@@ -3,7 +3,7 @@
 <div class="post-pagination-row">
   {% if page.next %}
     <a href="{{ base_path }}{{ page.next.url }}" class="square-button prev" title="{{ page.next.title | markdownify | strip_html }}">
-      →
+      ←
     </a>
   {% else %}
     <span class="square-button prev disabled">→</span>
@@ -13,7 +13,7 @@
 
   {% if page.previous %}
     <a href="{{ base_path }}{{ page.previous.url }}" class="square-button next" title="{{ page.previous.title | markdownify | strip_html }}">
-      ←
+      →
     </a>
   {% else %}
     <span class="square-button next disabled">←</span>
