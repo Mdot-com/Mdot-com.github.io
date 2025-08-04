@@ -437,3 +437,42 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 .archive__item-title > a {
   color: #FF7F50;
 }
+
+.pagination-single {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+  font-weight: 600;
+  font-size: 1rem;
+  max-width: 700px;
+}
+
+.pagination--pager {
+  min-width: 120px;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: #007acc;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.pagination--pager:hover:not(.disabled) {
+  background-color: #005fa3;
+}
+
+.pagination--pager.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+}
+
+.pagination--pager.prev {
+  text-align: left;
+}
+
+.pagination--pager.next {
+  text-align: right;
+}
+
