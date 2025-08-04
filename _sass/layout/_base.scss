@@ -436,23 +436,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 
 .archive__item-title > a {
   color: #FF7F50;
-}
-.pagination-side-button {
-  border: 2px solid #FF7F50;
-  background-color: transparent;
-  color: #FF7F50;
-  text-decoration: none;
-  padding: 0.4em 1em;
-  font-weight: 600;
-  font-size: 0.85em;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
 
-  &:hover {
-    background-color: #FF7F50;
-    color: white;
-  }
 
   &.disabled {
     opacity: 0.3;
