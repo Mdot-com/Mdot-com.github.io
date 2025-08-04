@@ -46,52 +46,56 @@ sidebar: false
 <h2>Research Highlights</h2>
 
 <div>
-  <h3>Hydrodynamic Mass Estimates for R136a1</h3>
+  <h3><a href="https://ui.adsabs.harvard.edu/abs/2022ARA&A..60..203V/abstract" target="_blank" rel="noopener noreferrer">Theory and Diagnostics of Hot Star Mass Loss</a></h3>
   <p>
-    <a href="https://ui.adsabs.harvard.edu/abs/2025A&A...696A.200S/abstract" target="_blank" rel="noopener noreferrer">Sabhahit et al. (2025a)</a> computed the first hydrodynamically consistent non-LTE atmosphere models for WNh stars in R136a1 and R144, empirically and theoretically deriving mass-loss rates and wind speeds. They constrained R136a1’s present-day mass at ~233 M⊙—a key benchmark for VMS physics.
+    Vink (2022) reviews advances in hot star wind theory, highlighting complex dependencies of mass loss on stellar parameters and metallicity. The work discusses wind transitions across the HR diagram and identifies very massive and stripped helium stars as key ionizing sources shaping star formation locally and at high redshift.
   </p>
 </div>
 
 <div>
-  <h3>Nitrogen in high‑z galaxies</h3>
+  <h3><a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.504..146V/abstract" target="_blank" rel="noopener noreferrer">Maximum black hole mass across cosmic time</a></h3>
   <p>
-    <a href="/publications/#vink2023">Vink (2023)</a> argued that early‑universe galaxies, including GN‑z11 and the Sunburst Arc, show high nitrogen content likely originating from VMS winds (100–1000 M⊙). These stars dominate chemical feedback and stellar ionization in young systems.
+    Vink et al. (2021) demonstrate that very massive stars at low metallicity can produce black holes exceeding the pair-instability limit (~50 M⊙) by accounting for core overshooting and metallicity-dependent winds. Their MESA models explain gravitational wave detections of heavy black holes (~85 M⊙) and map maximum BH masses as a function of metallicity and cosmic time.
   </p>
 </div>
 
 <div>
-  <h3>Universal Wind Behavior across the HR Diagram</h3>
-  <img src="/assets/images/red_supergiant_kink.png" alt="RSG wind kink">
+  <h3><a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.529.2980W/abstract" target="_blank" rel="noopener noreferrer">Predicting the heaviest black holes below the pair instability gap</a></h3>
   <p>
-    <a href="/publications/#vink2023rsg">Vink and Sabhahit (2023)</a> identified a universal “wind kink” at the transition from optically thin to thick winds. Applied to red supergiants, this new RSG mass-loss prescription naturally reproduces the Humphreys‑Davidson limit and resolves long-standing supernova evolution issues.
+    Winch et al. (2024) challenge the traditional pair-instability mass gap by showing that blue supergiant progenitors with small cores but massive hydrogen envelopes at low metallicity can produce black holes up to ~93 M⊙. Using an extensive grid of MESA models with varying physics, they demonstrate how mixing and envelope retention fill the lower PI gap, impacting predictions for heavy BH formation.
   </p>
 </div>
 
 <div>
-  <h3>Metallicity‑dependent Wind Scaling for OB Stars</h3>
-  <img src="/assets/images/metallicity_scaling.png" alt="Metallicity scaling of winds">
+  <h3><a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.3736S/abstract" target="_blank" rel="noopener noreferrer">Mass-loss implementation and temperature evolution of very massive stars</a></h3>
   <p>
-    <a href="/publications/#vink2021">Vink &amp; Sander (2021)</a> updated the Monte Carlo mass-loss recipe for massive OB stars, revealing a weaker terminal velocity dependence on metallicity and a strong relation between mass-loss rates and metallicity: \(\dot{M} \propto Z^{0.42–0.85}\) depending on temperature regime. This has direct implications for low-metallicity LIGO/Virgo black hole progenitors.
+    Sabhahit et al. (2022) develop a new MESA mass-loss recipe transitioning between O-star and Wolf-Rayet winds, showing that VMS mass loss scaling with luminosity-to-mass reproduces the observed narrow temperature range in Galactic and LMC very massive stars. This reveals a self-regulatory mechanism stabilizing their effective temperatures during evolution.
+  </p>
+</div>
+
+<div>
+  <h3><a href="https://ui.adsabs.harvard.edu/abs/2019A&A...622A..50H/abstract" target="_blank" rel="noopener noreferrer">Massive star evolution: rotation, winds, and overshooting vectors in the mass-luminosity plane. I.</a></h3>
+  <p>
+    Higgins & Vink (2019) present a calibrated grid of rotating massive star models constrained by the eclipsing binary HD 166734. Their mass-luminosity plane tool requires enhanced core overshooting and rotational mixing to match observations, implying a widened main sequence and influencing red supergiant luminosities and supernova explodability.
   </p>
 </div>
 
 <h2>Recent Publications</h2>
 <ul>
-  {% assign first_author_pubs = site.publications | where: "category", "manuscripts" | sort: "date" | reverse | slice: 0, 3 %}
-  {% for pub in first_author_pubs %}
-    <li style="margin-bottom: 1.5em;">
-      <strong><a href="{{ pub.url }}">{{ pub.title }}</a></strong><br>
-      <em>{{ pub.authors | join: ", " }}</em><br>
-      <span>{{ pub.content | strip_html | truncatewords: 30 }}</span>
-    </li>
-  {% endfor %}
+  <li>
+    <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv250418621H/abstract" target="_blank" rel="noopener noreferrer">The impact of wind mass loss on nucleosynthesis and yields of very massive stars at low metallicity</a><br>
+    Higgins et al. (2025), arXiv e-prints
+  </li>
+  <li>
+    <a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.tmp..656W/abstract" target="_blank" rel="noopener noreferrer">The black hole - pair instability boundary for high stellar rotation</a><br>
+    Winch et al. (2025), MNRAS
+  </li>
+  <li>
+    <a href="https://ui.adsabs.harvard.edu/abs/2025A&A...696A.200S/abstract" target="_blank" rel="noopener noreferrer">A new mass estimate method with hydrodynamical atmospheres for very massive WNh stars</a><br>
+    Sabhahit et al. (2025), Astronomy and Astrophysics
+  </li>
 </ul>
 <p><a href="/publications/">More publications →</a></p>
-
-<h2>News & Updates</h2>
-<ul>
-  <li><strong>July 2025:</strong> Sabhahit et al. 2025 accepted in *A&A* on R136a1 hydrodynamic modeling.</li>
-</ul>
 
 <h2>Contact</h2>
 <p>
