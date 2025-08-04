@@ -31,7 +31,7 @@ sidebar: false
 
 <h2>Group Lead</h2>
 <p>
-  <strong>Professor Jorick S. Vink</strong> is a leading theoretical astrophysicist at Armagh Observatory whose models of radiation‑driven winds in very massive stars have reshaped our understanding of stellar feedback, black hole seed formation, and chemical enrichment.
+  <strong>Professor Jorick S. Vink</strong> is a leading theoretical astronomer at Armagh Observatory whose models of radiation‑driven winds in massive stars have reshaped our understanding of stellar feedback, black hole seed formation, and chemical enrichment.
 </p>
 
 <h2>Current and Past Team Members</h2>
