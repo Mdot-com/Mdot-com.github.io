@@ -1,42 +1,56 @@
 .post-pagination-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 2em;
-  margin: 3em auto;
+  align-items: center;
   max-width: 1200px;
+  margin: 4em auto 2em auto;
   padding: 0 1em;
 }
 
 .square-button {
   width: 50px;
   height: 50px;
+  background-color: transparent;
+  color: $link-color;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: 2px solid $link-color;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffd699;
-  color: #333;
-  border: 2px solid #e0a95c;
-  border-radius: 6px;
-  font-size: 1.5em;
-  font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    background-color: #ffc266;
+    background-color: $link-color;
+    color: white;
   }
 
   &.disabled {
+    background-color: transparent;
+    border-color: #ccc;
+    color: #ccc;
     pointer-events: none;
-    background-color: #f0f0f0;
-    color: #aaa;
-    border-color: #ddd;
   }
 }
 
-.post-content-center {
+.spacer {
   flex: 1;
-  max-width: 800px;
-  text-align: justify;
+}
+
+// Footer tweaks
+.page__footer-follow,
+.page__footer-copyright {
+  padding: 0.25em 1em;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.page__footer-follow ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  gap: 1em;
 }
