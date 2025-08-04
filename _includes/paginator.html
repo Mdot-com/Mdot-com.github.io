@@ -3,14 +3,16 @@
 {% if paginator.total_pages > 1 %}
 <nav class="pagination-bar">
   <div class="pagination-controls">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="pagination-button prev" href="{{ base_path }}/">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-      {% else %}
-        <a class="pagination-button prev" href="{{ base_path }}/page{{ paginator.previous_page }}/">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-      {% endif %}
+
+    {# --- SWAPPED BUTTON: NEXT LOGIC FOR PREVIOUS POSITION --- #}
+    {% if paginator.next_page %}
+      <a class="pagination-button prev" href="{{ base_path }}/page{{ paginator.next_page }}/">
+        {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
+      </a>
     {% else %}
-      <span class="pagination-button prev disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
+      <span class="pagination-button prev disabled">
+        {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
+      </span>
     {% endif %}
 
     <ul class="pagination-pages">
@@ -51,11 +53,23 @@
       {% endif %}
     </ul>
 
-    {% if paginator.next_page %}
-      <a class="pagination-button next" href="{{ base_path }}/page{{ paginator.next_page }}/">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+    {# --- SWAPPED BUTTON: PREVIOUS LOGIC FOR NEXT POSITION --- #}
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a class="pagination-button next" href="{{ base_path }}/">
+          {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+        </a>
+      {% else %}
+        <a class="pagination-button next" href="{{ base_path }}/page{{ paginator.previous_page }}/">
+          {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+        </a>
+      {% endif %}
     {% else %}
-      <span class="pagination-button next disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span>
+      <span class="pagination-button next disabled">
+        {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+      </span>
     {% endif %}
+
   </div>
 </nav>
 {% endif %}
