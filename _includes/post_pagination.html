@@ -1,21 +1,23 @@
 {% include base_path %}
 
 <div class="post-pagination-row">
+  {# SWAPPED: NEXT logic and symbol on left #}
   {% if page.previous %}
-    <a href="{{ base_path }}{{ page.previous.url }}" class="square-button prev" title="{{ page.previous.title | markdownify | strip_html }}">
-      ←
-    </a>
-  {% else %}
-    <span class="square-button prev disabled">←</span>
-  {% endif %}
-
-  <div class="spacer"></div>
-
-  {% if page.next %}
-    <a href="{{ base_path }}{{ page.next.url }}" class="square-button next" title="{{ page.next.title | markdownify | strip_html }}">
+    <a href="{{ base_path }}{{ page.previous.url }}" class="square-button next" title="{{ page.previous.title | markdownify | strip_html }}">
       →
     </a>
   {% else %}
     <span class="square-button next disabled">→</span>
+  {% endif %}
+
+  <div class="spacer"></div>
+
+  {# SWAPPED: PREVIOUS logic and symbol on right #}
+  {% if page.next %}
+    <a href="{{ base_path }}{{ page.next.url }}" class="square-button prev" title="{{ page.next.title | markdownify | strip_html }}">
+      ←
+    </a>
+  {% else %}
+    <span class="square-button prev disabled">←</span>
   {% endif %}
 </div>
