@@ -462,12 +462,13 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   }
 }
 
-/* Footer alignment */
 .page__footer-follow,
 .page__footer-copyright {
-  max-width: 1000px; /* or your preferred max width */
-  margin-left: 0;    /* align to the left */
-  margin-right: auto; /* push the right side empty */
-  padding-left: 1em;  /* optional padding */
-  text-align: left;   /* align text left */
+  max-width: 900px;   // reduced width to limit right-side spread
+  margin-left: 2em;   // add left margin
+  margin-right: auto; // push content away from the right edge
+  padding-left: 1em;  // consistent padding
+  text-align: left;   // keep text left-aligned
+  font-size: 0.75em;  // reduce font size
 }
+
