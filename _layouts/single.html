@@ -84,8 +84,10 @@ layout: default
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
-
-      {% include post_pagination.html %}
+      
+      <div style="padding-bottom: 6rem;">
+        {% include post_pagination.html %}
+      </div>
     </div>
 
     {% if site.comments.provider and page.comments %}
