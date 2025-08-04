@@ -26,7 +26,7 @@ sidebar: false
 
 <h2>About Us</h2>
 <p>
-  We are the <strong>Massive Star Group</strong> at Armagh Observatory, focusing on the extremes of stellar physics—from metal‑free Population III stars to modern supermassive stars. Using self‑consistent hydrodynamic atmosphere models, we tackle stellar winds, mass loss, and the cosmic feedback of the most massive stars.
+We are the <strong>Massive Star Group</strong> at Armagh Observatory, specializing in the wind physics of massive and very massive stars across both the metal-poor early Universe and the metal-rich local Universe. Our expertise spans stellar evolution modeling and hydrodynamical atmosphere modeling, enabling us to study stellar winds, mass loss, and the cosmic feedback of the most massive stars.
 </p>
 
 <h2>Group Lead</h2>
@@ -99,7 +99,7 @@ sidebar: false
 
 <h2>Contact</h2>
 <p>
-  Interested in collaborating or joining the team? Contact <a href="mailto:jorick.vink@armagh.ac.uk">Prof. Jorick Vink</a> for PhD or postdoc opportunities.
+Email: <a href="mailto:jorick.vink@armagh.ac.uk">Prof. Jorick Vink</a> 
 </p>
 
 </div>
