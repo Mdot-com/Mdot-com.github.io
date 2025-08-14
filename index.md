@@ -26,21 +26,21 @@ sidebar: false
 
 <h2>About Us</h2>
 <p>
-We are the <strong>Massive Star Group</strong> at Armagh Observatory, specializing in the wind physics of massive and very massive stars across both the metal-poor early Universe and the metal-rich local Universe. Our expertise spans stellar evolution modeling and hydrodynamical atmosphere modeling, enabling us to study stellar winds, mass loss, and the cosmic feedback of the most massive stars.
+We are the <strong>Massive Star Group</strong> at Armagh Observatory, specializing in the wind physics of massive and very massive stars in the local Universe as well as the metal-poor early Universe. Our expertise spans stellar evolution modeling and hydrodynamical atmosphere modeling, enabling us to study stellar winds, mass loss, and the cosmic feedback of the most massive stars.
 </p>
 
 <h2>Group Lead</h2>
 <p>
-  <strong>Professor Jorick  S. Vink</strong> is a leading theoretical astronomer at Armagh Observatory whose models of radiation‑driven winds in massive stars have reshaped our understanding of stellar feedback, black hole seed formation, and chemical enrichment.
+  <strong>Professor Jorick  S. Vink</strong> is a leading astronomer at Armagh Observatory whose models of radiation‑driven winds in massive stars have reshaped our understanding of stellar feedback, black hole mass distribution, and chemical enrichment.
 </p>
 
 <h2>Current and Past Team Members</h2>
 <ul>
   <li>Ciaran Furey – PhD Student</li>
   <li>Ethan Winch – PhD Student</li>
-  <li>Gautham Sabhahit – Postdoctoral Assistant</li>
+  <li><a href="https://gautham-sabhahit.github.io/" target="_blank">Gautham Sabhahit</a> – Postdoctoral Researcher</li>
   <li>Erin Higgins – Former Postdoctoral Researcher</li>
-  <li>Andreas Sander – Former Postdoctoral Researcher</li>
+  <li><a href="https://wwwstaff.ari.uni-heidelberg.de/ansander/?content=ansander" target="_blank">Andreas Sander</a> – Former Postdoctoral Researcher</li>
 </ul>
 
 <h2>Research Highlights</h2>
