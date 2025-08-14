@@ -43,7 +43,7 @@ We are the <strong>Massive Star Group</strong> at Armagh Observatory, specializi
   <li><a href="https://wwwstaff.ari.uni-heidelberg.de/ansander/?content=ansander" target="_blank">Andreas Sander</a> – Former Postdoctoral Researcher</li>
 </ul>
 
-<h2>Research Highlights</h2>
+<h2>Research Highlights from the group</h2>
 
 <div>
   <h3><a href="https://ui.adsabs.harvard.edu/abs/2022ARA&A..60..203V/abstract" target="_blank" rel="noopener noreferrer">Theory and Diagnostics of Hot Star Mass Loss</a></h3>
