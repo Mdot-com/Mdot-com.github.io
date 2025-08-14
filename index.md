@@ -31,7 +31,7 @@ We are the <strong>Massive Star Group</strong> at Armagh Observatory, specializi
 
 <h2>Group Lead</h2>
 <p>
-  <strong>Professor Jorick  S. Vink</strong> is a leading astronomer at Armagh Observatory whose models of radiation‑driven winds in massive stars have reshaped our understanding of stellar feedback, black hole mass distribution, and chemical enrichment.
+  <strong><a href="https://armagh.space/site/author/jorickvink"><strong>Professor Jorick S. Vink</strong></a> is a leading astronomer at Armagh Observatory whose models of radiation-driven winds in massive stars have significantly advanced our understanding of stellar wind physics, stellar feedback, chemical enrichment, and the distribution of black hole masses. His research interests include the physics of stellar winds and stellar evolution, with a particular focus on the role of radiation pressure at the upper end of the stellar mass spectrum. On the observational side, much of his work involves spectroscopy and spectro-polarimetry.
 </p>
 
 <h2>Current and Past Team Members</h2>
@@ -74,7 +74,7 @@ We are the <strong>Massive Star Group</strong> at Armagh Observatory, specializi
 </div>
 
 <div>
-  <h3><a href="https://ui.adsabs.harvard.edu/abs/2019A&A...622A..50H/abstract" target="_blank" rel="noopener noreferrer">Massive star evolution: rotation, winds, and overshooting vectors in the mass-luminosity plane. I.</a></h3>
+  <h3><a href="https://ui.adsabs.harvard.edu/abs/2019A&A...622A..50H/abstract" target="_blank" rel="noopener noreferrer">Massive star evolution: rotation, winds, and overshooting vectors in the mass-luminosity plane</a></h3>
   <p>
     Higgins & Vink (2019) present a calibrated grid of rotating massive star models constrained by the eclipsing binary HD 166734. Their mass-luminosity plane tool requires enhanced core overshooting and rotational mixing to match observations, implying a widened main sequence and influencing red supergiant luminosities and supernova explodability.
   </p>
