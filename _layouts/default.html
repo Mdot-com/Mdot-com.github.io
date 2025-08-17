@@ -24,7 +24,7 @@ layout: compress
         background: var(--global-bg-color);
         border-bottom: 1px solid #ccc;
         display: flex;
-        align-items: center; /* vertical centering */
+        align-items: center;
         justify-content: space-between;
         padding: 0 1rem;
         z-index: 1000;
@@ -52,6 +52,30 @@ layout: compress
         text-decoration: none;
         color: var(--global-text-color);
         white-space: nowrap;
+      }
+
+      .masthead-top__nav {
+        margin-left: 1rem;
+      }
+
+      .masthead-top__nav .masthead__button {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        border: 2px solid var(--global-text-color);
+        background-color: var(--global-bg-color);
+        color: var(--global-text-color);
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        font-size: 0.95rem;
+      }
+
+      .masthead-top__nav .masthead__button:hover {
+        background-color: var(--global-text-color);
+        color: var(--global-bg-color);
       }
 
       #theme-toggle a {
@@ -132,7 +156,7 @@ layout: compress
 
       /* Page content */
       .page-content {
-        margin-left: 0; /* will adjust dynamically with JS */
+        margin-left: 0;
         padding: 4rem 2rem 4rem 2rem;
         box-sizing: border-box;
         min-height: 100vh;
@@ -169,6 +193,9 @@ layout: compress
       <div id="hamburger"><i class="fa-solid fa-bars"></i></div>
       <div class="masthead-top__title">
         <a href="{{ base_path }}/">Massive Star Group at Armagh Observatory</a>
+      </div>
+      <div class="masthead-top__nav">
+        <a href="{{ base_path }}/" class="masthead__button">Home</a>
       </div>
       <div id="theme-toggle" class="masthead-top__toggle">
         <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
