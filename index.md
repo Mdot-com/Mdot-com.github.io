@@ -8,7 +8,7 @@ sidebar: false
 <style>
   .page__content,
   .archive {
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 1em;
     text-align: justify;
