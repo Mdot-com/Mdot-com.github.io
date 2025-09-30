@@ -188,11 +188,11 @@ hide_title: true
   </div>
   
   <div class="button-card" onclick="openModal('modal2')">
-    <h2>MESA Inlists for VMS Mass Loss Rates</h2>
+    <h2>MESA Files for VMS Mass-Loss Implementations</h2>
   </div>
   
   <div class="button-card" onclick="openModal('modal3')">
-    <h2>MESA Files for RSG Mass Loss Rate</h2>
+    <h2>MESA Files for RSG Mass-Loss Implementation</h2>
   </div>
 </div>
 
@@ -227,13 +227,30 @@ hide_title: true
 <div id="modal2" class="modal-overlay" onclick="closeModalOnBackdrop(event, 'modal2')">
   <div class="modal-content" onclick="event.stopPropagation()">
     <button class="close-button" onclick="closeModal('modal2')">&times;</button>
-    <h2>MESA Files for VMS Mass-Loss Implementations</h2>
+    <h2>VMS Mass-Loss Implementation</h2>
     <p>
-      [Add your description for VMS mass loss rates here]
+      Mass loss for classical massive stars (10-50 M☉) with optically-thin winds is typically taken from Vink et al. (2000, 2001), which show a shallow scaling with the Eddington parameter. However, a steeper scaling of mass loss in proximity to the Eddington limit has been found in <a href="https://ui.adsabs.harvard.edu/abs/2011A%26A...531A.132V/abstract" target="_blank">Vink et al. (2011)</a>. This study implements a switch in the mass loss from a shallow to steeper scaling at the transition mass loss point where the single scattering limit is approximately breached as proposed in <a href="https://ui.adsabs.harvard.edu/abs/2012ApJ...751L..34V/abstract" target="_blank">Vink & Gräfener (2012)</a>.
     </p>
-    <div class="link-group">
-      <a href="#" target="_blank">Link 1</a>
-      <a href="#" target="_blank">Link 2</a>
+    <p>
+      We use two different ways to estimate the transition mass loss point based on the presence or absence of observed VMSs:
+    </p>
+    <p>
+      <strong>For high metallicity (Z = 0.02 to 0.008, GAL and LMC-like):</strong> The transition mass-loss rate is obtained using the observed luminosities of the Of/WNh stars in the Arches cluster in our own galaxy and the 30 Dor in the LMC. We use η ~ 0.6 to get the transition mass-loss rate from the luminosity. For the high Z implementation, see the <a href="https://github.com/gautham-sabhahit/VMS_paper1" target="_blank">VMS_paper1 repository</a> and <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.3736S/abstract" target="_blank">Sabhahit et al. (2022)</a> - Mass-loss implementation and temperature evolution of very massive stars.
+    </p>
+    <p>
+      <strong>For low metallicity (Z = 0.004 to 0.0002, SMC-like or below):</strong> We do not have observed individual VMS in low metallicity environments to get the transition point. In the absence of such a large sample of VMS, we make use of both the concepts of transition mass loss point from <a href="https://ui.adsabs.harvard.edu/abs/2012ApJ...751L..34V/abstract" target="_blank">Vink & Gräfener (2012)</a> and hydro-dynamically consistent PoWR atmosphere models to construct the new implementation. For the low Z implementation, see the <a href="https://github.com/gautham-sabhahit/VMS_paper2" target="_blank">VMS_paper2 repository</a> and <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1529S/abstract" target="_blank">Sabhahit et al. (2023)</a> - Very Massive Stars and Pair-Instability Supernovae: Mass-loss Framework for Low Metallicity.
+    </p>
+    <div class="link-group" style="margin-top: 30px;">
+      <strong>High Metallicity (Z = 0.008-0.02):</strong>
+      <a href="https://github.com/gautham-sabhahit/VMS_paper1" target="_blank">GitHub Repository - VMS_paper1</a>
+      <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.3736S/abstract" target="_blank">Sabhahit et al. (2022) - NASA ADS</a>
+      <a href="https://arxiv.org/abs/2205.09125" target="_blank">Sabhahit et al. (2022) - arXiv</a>
+    </div>
+    <div class="link-group" style="margin-top: 20px;">
+      <strong>Low Metallicity (Z = 0.0002-0.004):</strong>
+      <a href="https://github.com/gautham-sabhahit/VMS_paper2" target="_blank">GitHub Repository - VMS_paper2</a>
+      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1529S/abstract" target="_blank">Sabhahit et al. (2023) - NASA ADS</a>
+      <a href="https://arxiv.org/abs/2306.11785" target="_blank">Sabhahit et al. (2023) - arXiv</a>
     </div>
   </div>
 </div>
@@ -242,7 +259,7 @@ hide_title: true
 <div id="modal3" class="modal-overlay" onclick="closeModalOnBackdrop(event, 'modal3')">
   <div class="modal-content" onclick="event.stopPropagation()">
     <button class="close-button" onclick="closeModal('modal3')">&times;</button>
-    <h2>MESA Files for RSG Mass-Loss Implementation</h2>
+    <h2>RSG Mass-Loss</h2>
     <p>
       [Add your description for RSG mass loss rate here]
     </p>
