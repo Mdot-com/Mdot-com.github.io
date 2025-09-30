@@ -5,7 +5,6 @@ permalink: /scripts/
 author_profile: true
 hide_title: true
 ---
-
 <style>
   #main {
     max-width: 1000px;
@@ -15,7 +14,7 @@ hide_title: true
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .page-header h1 {
     font-size: 2rem;
@@ -28,43 +27,165 @@ hide_title: true
     background-color: #FF7F50;
     border-radius: 2px;
   }
-
-  .section-title {
-    font-size: 1rem;
+  
+  /* Button Cards Grid */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  
+  .button-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .button-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  }
+  
+  .button-card h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
     font-weight: 600;
-    margin: 40px 0 10px 0;
   }
-
-  .section-text {
-    font-size: 0.8rem;
+  
+  /* Different colors for each button */
+  .button-card:nth-child(1) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .button-card:nth-child(2) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+  
+  .button-card:nth-child(3) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #FF7F50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background: #ff6347;
+  }
+  
+  .modal-content h2 {
+    color: #333;
+    font-size: 1.8rem;
     margin-bottom: 20px;
-    line-height: 1.6;
+    padding-right: 40px;
   }
-
+  
+  .modal-content p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
   .link-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 12px;
+    margin-top: 20px;
   }
-
+  
   .link-group a {
     text-decoration: none;
-    color: coral;
+    color: #667eea;
     font-weight: 500;
     font-size: 1rem;
+    transition: color 0.3s ease;
   }
-
+  
   .link-group a:hover {
+    color: #764ba2;
     text-decoration: underline;
   }
-
+  
   @media (min-width: 57.8125em) {
     .archive {
       padding-left: 0 !important;
       float: none !important;
       width: 100% !important;
       margin-right: 0 !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .button-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+      padding: 30px 20px;
     }
   }
 </style>
@@ -74,30 +195,102 @@ hide_title: true
   <div class="line"></div>
 </div>
 
-<div id="content-wrapper">
-  <div class="section-title">1. Mass–Luminosity Calculator</div>
-
-  <div class="section-text">
-    We provide a Python script and an online calculator that enable users to compute mass–luminosity relations (MLRs), which can predict the minimum, maximum, and pure-helium (He) mass for a given luminosity and surface composition — and vice versa.
-    These results are based on the stellar structure models presented in Sabhahit et al. (2025b) and build upon existing MLRs in the literature by incorporating models that feature a helium core and hydrogen shell. These configurations may result from partial envelope stripping and can break simple homology relations, appearing more luminous than pure-He stars despite having a lower mean molecular weight.
-    A detailed description of our additional structure models by taking into account partial envelope stripping and the resulting new MLRs can be found <a href="https://gautham-sabhahit.github.io/ml-calculator/" target="_blank">here</a>.
+<div class="button-grid">
+  <div class="button-card" onclick="openModal('modal1')">
+    <h2>Mass-Luminosity Calculator</h2>
   </div>
-
-  <div class="link-group" style="margin-top: 1.5em;">
-    <a href="https://github.com/Apophis-1/MLR-scripts/blob/main/ML-calculator.py" target="_blank">MLR Python script from Sabhahit et al. (2025b)</a>
-    <a href="https://gautham-sabhahit.github.io/ml-calculator/" target="_blank">MLR Online calculator from Sabhahit et al. (2025b)</a>
+  
+  <div class="button-card" onclick="openModal('modal2')">
+    <h2>MESA Inlists for VMS Mass Loss Rates</h2>
   </div>
-
-  <div class="section-text" style="margin-top: 2em;">
-    For comparison, we also provide a Python script implementing the minimum and maximum MLRs from Gräfener et al. 2011 (  
-    <a href="https://ui.adsabs.harvard.edu/abs/2011A%26A...535A..56G/abstract" target="_blank">NASA ADS</a>).
-  </div>
-
-  <div class="link-group">
-    <a href="https://github.com/Apophis-1/MLR-scripts/blob/main/ML-calculator-Gräfener.py" target="_blank">MLR Python script from Gräfener et al. (2011)</a>
+  
+  <div class="button-card" onclick="openModal('modal3')">
+    <h2>MESA Files for RSG Mass Loss Rate</h2>
   </div>
 </div>
 
-
-
+<!-- Modal 1: Mass-Luminosity Calculator -->
+<div id="modal1" class="modal-overlay" onclick="closeModalOnBackdrop(event, 'modal1')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-button" onclick="closeModal('modal1')">&times;</button>
+    <h2>Mass–Luminosity Calculator</h2>
+    <p>
+      We provide a Python script and an online calculator that enable users to compute mass–luminosity relations (MLRs), which can predict the minimum, maximum, and pure-helium (He) mass for a given luminosity and surface composition — and vice versa.
+    </p>
+    <p>
+      These results are based on the stellar structure models presented in Sabhahit et al. (2025b) and build upon existing MLRs in the literature by incorporating models that feature a helium core and hydrogen shell. These configurations may result from partial envelope stripping and can break simple homology relations, appearing more luminous than pure-He stars despite having a lower mean molecular weight.
+    </p>
+    <p>
+      A detailed description of our additional structure models by taking into account partial envelope stripping and the resulting new MLRs can be found <a href="https://gautham-sabhahit.github.io/ml-calculator/" target="_blank">here</a>.
+    </p>
+    <div class="link-group">
+      <a href="https://github.com/Apophis-1/MLR-scripts/blob/main/ML-calculator.py" target="_blank">MLR Python script from Sabhahit et al. (2025b)</a>
+      <a href="https://gautham-sabhahit.github.io/ml-calculator/" target="_blank">MLR Online calculator from Sabhahit et al. (2025b)</a>
+    </div>
+    <p style="margin-top: 30px;">
+      For comparison, we also provide a Python script implementing the minimum and maximum MLRs from Gräfener et al. 2011 (<a href="https://ui.adsabs.harvard.edu/abs/2011A%26A...535A..56G/abstract" target="_blank">NASA ADS</a>).
+    </p>
+    <div class="link-group">
+      <a href="https://github.com/Apophis-1/MLR-scripts/blob/main/ML-calculator-Gräfener.py" target="_blank">MLR Python script from Gräfener et al. (2011)</a>
+    </div>
+  </div>
 </div>
+
+<!-- Modal 2: VMS Mass Loss -->
+<div id="modal2" class="modal-overlay" onclick="closeModalOnBackdrop(event, 'modal2')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-button" onclick="closeModal('modal2')">&times;</button>
+    <h2>MESA Inlists for VMS Mass Loss Rates</h2>
+    <p>
+      [Add your description for VMS mass loss rates here]
+    </p>
+    <div class="link-group">
+      <a href="#" target="_blank">Link 1</a>
+      <a href="#" target="_blank">Link 2</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3: RSG Mass Loss -->
+<div id="modal3" class="modal-overlay" onclick="closeModalOnBackdrop(event, 'modal3')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-button" onclick="closeModal('modal3')">&times;</button>
+    <h2>MESA Files for RSG Mass Loss Rate</h2>
+    <p>
+      [Add your description for RSG mass loss rate here]
+    </p>
+    <div class="link-group">
+      <a href="#" target="_blank">Link 1</a>
+      <a href="#" target="_blank">Link 2</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  
+  function closeModalOnBackdrop(event, modalId) {
+    if (event.target.classList.contains('modal-overlay')) {
+      closeModal(modalId);
+    }
+  }
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      const activeModal = document.querySelector('.modal-overlay.active');
+      if (activeModal) {
+        activeModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+  });
+</script>
